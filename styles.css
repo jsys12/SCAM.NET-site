@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box; /* Добавлено для точного центрирования и размеров */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #23352a 0%, #2f7232 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    margin: 20px;
+}
+
+h1 {
+    color: aliceblue;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.form_text {
+    color: rgb(78, 196, 170);
+    text-align: left;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1em;
+    transition: box-shadow 0.3s ease;
+    width: 100%; /* Добавлено для полной ширины */
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(78, 196, 170, 0.5);
+}
+
+button {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.result-container {
+    width: 90%; /* Уменьшено для отступов от краёв */
+    min-height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(78, 196, 170, 0.3);
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    opacity: 0.7;
+    text-align: center;
+    margin: 0 auto; /* Добавлено для строгого центрирования */
+}
+
+.result-container.show {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.result_title {
+    color: aliceblue;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.result_text {
+    color: rgb(78, 196, 170);
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.success { color: #4CAF50; }
+.error { color: #f44336; }
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .result-container {
+        padding: 15px;
+        width: 95%; /* Чуть шире на мобильных для баланса */
+    }
+}
