@@ -17,7 +17,7 @@ form.addEventListener('submit', (event) => {
     const username_Value = username.value;
     const pass_Value = pass.value;
 
-    const url = `http://127.0.0.1:8000/select_user_password/?username=${username_Value}&password=${pass_Value}`
+    const url = `https://my-fastapi-app-tfwi.onrender.com/select_user_password/?username=${username_Value}&password=${pass_Value}`
 
     delete_Text.textContent = '';
 
