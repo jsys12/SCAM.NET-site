@@ -12,12 +12,12 @@ pass.value = '12345'
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    
+    h2.textContent = '';
 
     const username_Value = username.value;
     const pass_Value = pass.value;
 
-    const url = `https://my-fastapi-app-tfwi.onrender.com/select_user_password/?username=${username_Value}&password=${pass_Value}`
+    const url = `http://127.0.0.1:8000/select_user_password/?username=${username_Value}&password=${pass_Value}`
 
     delete_Text.textContent = '';
 
@@ -27,6 +27,6 @@ form.addEventListener('submit', (event) => {
     .then(result => {
         result = result['result']
         console.log(result)
-        h2.textContent = `Логин: ${result["username"]}; Почта: ${result['gmail']}`;
+        h2.textContent = `Логин: ${result["username"]}; Почта: ${result['gmail']}; ID: ${result["id"]}`;
     })
 })
