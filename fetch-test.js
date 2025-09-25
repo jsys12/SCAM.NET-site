@@ -20,7 +20,8 @@ form1.addEventListener('submit', (event) => {
         } else if (result['id'] >= 0){
             const userData = {"login" : login, "gmail": result["gmail"],"ID" : result["id"]}
             sessionStorage.setItem("userData", JSON.stringify(userData))
-            document.location.href = 'https://my-fastapi-app-tfwi.onrender.com/profile.html'
+            document.location.href = 'https://jsys12.github.io/SCAM.NET-site/profile.html'
         }
     })
+
 })
