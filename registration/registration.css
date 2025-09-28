@@ -1,0 +1,229 @@
+* {
+    --font-family: "KyivType Sans", sans-serif;
+    --second-family: "Inter", sans-serif;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#main_rectangle_right {
+    width: fit-content;
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    width: 50%;
+    background: #2b2b2b;
+    float: right;
+}
+
+#main_rectangle_text_up,
+#main_rectangle_text_down {
+    position: absolute;
+    font-family: var(--font-family);
+    font-weight: 350;
+    font-size: clamp(80px, 15vw, 250px);
+    color: #fff;
+    left: 5%;
+    white-space: nowrap;
+}
+
+#main_rectangle_text_up {
+    top: 20%; 
+    min-height: 100%;
+    min-width: 10%;   
+    opacity: 0; 
+}
+
+#main_rectangle_text_down {
+    bottom: 20%; 
+    min-height: 10%;
+    min-width: 100%;  
+    opacity: 0;
+}
+
+#main_rectangle_left {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+#rectangle_up,
+#rectangle_down {
+    position: fixed;
+    border-radius: 43px;
+    width: 269px;
+    height: 540px;
+    background: #383838;
+    transform: rotate(-37deg);
+    z-index: -1;
+}
+
+#rectangle_down {
+    right: 99%;
+    top: 63%;
+    opacity: 0;
+}
+
+#rectangle_up {
+    left: 46%;
+    bottom: 63%;
+    opacity: 0;
+}
+
+#form_registration {
+    position: relative;
+    border-radius: 30px;
+    width: min(509px, 90vw);
+    height: min(697px, 90vh);
+    background: #2b2b2b;
+    left: 50%;
+    top: 50%;
+    transform: translate(-150%, -50%);
+    max-width: 509px;
+    max-height: 697px;
+    opacity: 0;
+}
+
+#main_text_registration {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 48px);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: min(40px, 5vh);
+    margin: 10px;
+    text-align: center;
+}
+ 
+#side_text_registration {
+    display: flex;
+    justify-content: center;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    padding-bottom:60px;
+    margin: 0;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#href_registration {
+    color: white;
+    font-weight: 700;
+    margin-left: 5px;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#main_form_registration {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 70px);
+    gap: 10px;
+    padding: 20px;
+}
+
+#main_form_registration_user,
+#main_form_registration_email,
+#main_form_registration_password,
+#main_form_registration_confirm_password {
+    border: white 2px solid;
+    border-radius: 15px;
+    background: #1e1e1e;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+    padding: 0 15px;
+}
+
+#main_form_registration_button {
+    margin-top: 60px;
+    border-radius: 15px;
+    height: 86px;
+    background: #fff;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    width: 100%;
+    cursor: pointer;
+}
+
+#main_rectangle_text_up {
+    animation: main_rectangle_text_up_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes main_rectangle_text_up_anima {
+    to {
+        top: 25%; 
+        min-height: 100%;
+        min-width: 10%;
+        opacity: 1;
+    }
+}   
+
+#main_rectangle_text_down {
+    animation: main_rectangle_text_down_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes main_rectangle_text_down_anima {
+    to {
+        bottom: 25%; 
+        min-height: 10%;
+        min-width: 100%;  
+        opacity: 1;
+    }
+}
+
+#rectangle_up {
+    animation: rectangle_up_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes rectangle_up_anima {
+    to {
+        left: 40.5%;
+        bottom: 63%;
+        opacity: 1;
+    }
+}
+
+#rectangle_down {
+    animation: rectangle_down_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes rectangle_down_anima {
+    to {
+        right: 91%;
+        top: 63%;
+        opacity: 1;        
+    }
+}
+
+#form_registration {
+    animation: form_registration_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes form_registration_anima {
+    to {
+        opacity: 1;
+    }
+}
