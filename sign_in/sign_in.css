@@ -1,0 +1,224 @@
+* {
+    --font-family: "KyivType Sans", sans-serif;
+    --second-family: "Inter", sans-serif;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#main_rectangle_left {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    width: 50%;
+    background: #2b2b2b;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+#rectangle_left_text_up, 
+#rectangle_left_text_down {
+    position: absolute  ;
+    font-family: var(--font-family);
+    font-weight: 350;
+    font-size: 250px;
+    color: #fff;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+#rectangle_left_text_up {
+    top: 20%;
+    right: 5.5%;
+    opacity: 0;
+}
+
+#rectangle_left_text_down {
+    bottom: 20%;
+    right: 7%;
+    opacity: 0;
+}
+
+#main_rectangle_right {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    width: 50%;
+    float: right;
+    margin: 0;
+}
+
+#rectangle_up,
+#rectangle_down {
+    position: fixed;
+    border-radius: 43px;
+    width: 269px;
+    height: 540px;
+    background: #383838;
+    transform: rotate(37deg);
+    z-index: -1;
+    opacity: 1;
+}
+
+#rectangle_up {
+    left: 41%;
+    bottom: 63%;
+}
+
+#rectangle_down {
+    left: 95%;
+    top: 63%;
+}
+
+#form_sign_in {
+    position: absolute;
+    border-radius: 30px;
+    width: min(509px, 90vw);
+    height: min(697px, 90vh);
+    background: #2b2b2b;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 509px;
+    max-height: 697px;
+    opacity: 0;
+    padding: 40px; 
+}
+
+#main_text_sign_in {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 48px; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+#side_text_sign_in {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+}
+
+#href_sign_in {
+    color: white;
+    font-weight: 700;
+    margin-left: 5px;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#main_form_sign_in {
+    margin-top: 60px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 70px);
+    gap: 10px;
+    padding: 0px;
+}
+
+#main_form_sign_in_user,
+#main_form_sign_in_password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: white 2px solid;
+    border-radius: 15px;
+    background: #1e1e1e;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+}
+
+#main_form_sign_in_button {
+    margin-top: 210px;
+    border-radius: 15px;
+    height: 86px;
+    background: #fff;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    width: 100%;
+    cursor: pointer;
+}
+
+#rectangle_left_text_up {
+    animation: rectangle_left_text_up_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes rectangle_left_text_up_anima {
+    to {
+        top: 25%;
+        opacity: 1;
+    }
+}
+
+#rectangle_left_text_down {
+    animation: rectangle_left_text_down_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes rectangle_left_text_down_anima {
+    to {
+        bottom: 25%;
+        opacity: 1;
+    }
+}
+
+#rectangle_up {
+    animation: rectangle_up_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes rectangle_up_anima {
+    to {
+        left: 46%;
+    }
+}
+
+#rectangle_down {
+    animation: rectangle_down_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes rectangle_down_anima {
+    to {
+        left: 90%;
+    }
+}
+
+#form_sign_in {
+    animation: form_sign_in_anima 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes form_sign_in_anima {
+    to {
+        opacity: 1;
+    }
+}
