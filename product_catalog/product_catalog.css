@@ -1,0 +1,190 @@
+* {
+  --font-family: "KyivType Sans", sans-serif;
+  --second-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+#left_rectangle {
+  position: fixed;
+  width: 60vw;
+  height: 200vh;
+  background: #2b2b2b;
+  transform: rotate(16deg);
+  left: -12vw;
+  top: -50vh;
+  z-index: -1;
+}
+
+header {
+  position: fixed;
+  top: 2vh;
+  width: 100%;
+  z-index: 10;
+}
+
+#text_on_line {
+  position: fixed;
+  font-family: var(--font-family);
+  font-weight: 350;
+  font-size: 4vw;
+  color: #ffffff;
+  left: 5vw;
+  bottom: 80vh;
+}
+
+#line_white {
+  position: fixed;
+  border: 0.3vw solid #ffffff;
+  width: 0.8vw;
+  left: 0vw;
+  top: 12vh;
+  opacity: 0;
+}
+
+#line_black {
+  position: fixed;
+  border: 0.3vw solid #2b2b2b;
+  width: 45.6vw;
+  right: 100vw;
+  top: 12vh;
+  z-index: -1;
+  opacity: 0;
+}
+
+#products_all {
+  position: relative;
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  padding: 2vh 5vw;
+  color: white;
+}
+
+#products_left,
+#products_center,
+#products_right {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  opacity: 0;
+  margin-top: -15vh;
+}
+
+#Giga, #Meta, #SEO {
+  position: relative;
+  width: 25vw;
+  height: 40vh;
+  background: rgb(63, 63, 63);
+  font-family: var(--font-family);
+  font-weight: 350;
+  padding: 1vw;
+}
+
+#Video, #Cripto, #Break {
+  position: relative;
+  width: 25vw;
+  height: 20vh;
+  background: rgb(63, 63, 63);
+  font-family: var(--font-family);
+  font-weight: 350;
+  color: #ffffff;
+  padding: 1vw;
+}
+
+#Giga_text_p, #Meta_text_p, #SEO_text_p {
+  font-size: 1.7vw;
+  margin: 0;
+  margin-bottom: 1vh;
+}
+
+#Giga_text_span, #Meta_text_span, #SEO_text_span {
+  font-size: 0.8vw;
+  margin: 0;
+  margin-bottom: 2vh;
+}
+
+#Video_text_p, #Cripto_text_p, #Break_text_p {
+  font-size: 1.2vw;
+  margin: 0;
+  margin-bottom: 1vh;
+  line-height: 1.3;
+}
+
+#Video_text_span, #Cripto_text_span, #Break_text_span {
+  font-size: 0.7vw;
+  margin: 0;
+  margin-bottom: 2vh;
+}
+
+#Giga_line, #Meta_line, #SEO_line,
+#Video_line, #Cripto_line, #Break_line {
+  width: 6vw;
+  position: absolute;
+  bottom: 2vh;
+  right: 2vw;
+}
+
+
+#line_white {
+  animation: line_white_anima 0.5s forwards;
+}
+
+@keyframes line_white_anima {
+  to {
+    width: 50.8vw;
+    left: 4vw;
+    opacity: 1;
+  }
+}
+
+#line_black {
+  animation: line_black_anima 1.4s forwards;
+}
+
+@keyframes line_black_anima {
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+#products_left {
+  animation: products_left_anima 0.8s forwards;
+}
+
+@keyframes products_left_anima {
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+#products_center {
+  animation: products_center_anima 1.2s forwards;
+}
+
+@keyframes products_center_anima {
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+#products_right {
+  animation: products_right_anima 1.6s forwards;
+}
+
+@keyframes products_right_anima {
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
