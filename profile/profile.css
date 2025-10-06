@@ -1,0 +1,389 @@
+* {
+  --font-family: "KyivType Sans", sans-serif;
+  --second-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-y: hidden;
+}
+
+#header {
+  position: relative;
+  width: 100vw;
+  height: 7vh;
+  background: linear-gradient(90deg, #000 70.21%, #a8a8a8 100%);
+}
+
+#header_text_left {
+  position: absolute;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 3vh;
+  color: #fff;
+  left: 1vw;
+  top: 2vh;
+}
+
+#header_text_center {
+  position: absolute;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 4vh;
+  color: #fff;
+  text-align: center;
+  left: 45vw;
+  top: 1vh;
+}
+
+#my_page {
+  position: absolute;
+  font-family: var(--font-family);
+  font-weight: 350;
+  color: #000;
+  top: 8.5vh;
+  left: 2vw;
+  font-size: 5vh;
+}
+
+#line {
+  position: absolute;
+  border: 3px solid #000;
+  top: 15vh;
+  width: 100vw;
+  height: 0vh;
+}
+
+#main_page_ellipse {
+  position: relative;
+}
+
+#ellipce_grey {
+  width: 15vw;
+  height: 15vh;
+  position: absolute;
+  border-radius: 100%;
+  fill: #b6b6b6;
+  top: 2vh;
+  left: 30vw;
+  animation: ellipce_grey_anima 0.4s forwards;
+  opacity: 0;
+}
+
+#ellipce_tifany {
+  width: 15vw;
+  height: 15vh;
+  position: absolute;
+  border-radius: 100%;
+  fill: rgba(10, 194, 188, 0.6);
+  top: 53vh;
+  left: 1vw;
+  animation: ellipce_tifany_anima 0.7s forwards;
+  opacity: 0;
+}
+
+#ellipce_grey_big {
+  width: 20vw;
+  height: 20vh;
+  position: absolute;
+  border-radius: 100%;
+  fill: #606060;
+  top: 40vh;
+  left: 40vw;
+  animation: ellipce_grey_big_anima 1s forwards;
+  opacity: 0;
+}
+
+#ellipce_tifany_big {
+  width: 20vw;
+  height: 20vh;
+  position: absolute;
+  border-radius: 100%;
+  fill: #0abab5;
+  top: 5vh;
+  left: 79.5vw;
+  animation: ellipce_tifany_big 0.9s forwards;
+  opacity: 0;
+}
+
+#profile {
+  position: relative;
+}
+
+#img_profile {
+  position: absolute;
+  top: 10vh;
+  left: 2vw;
+  border-radius: 247px;
+  width: 8vw;
+  height: 15vh;
+}
+
+#profile_name {
+  position: absolute;
+  top: 10vh;
+  left: 11vw;
+  font-size: 4vh;
+  font-family: var(--font-family);
+  font-weight: 350;
+  color: #000;
+}
+
+#profile_email {
+  position: absolute;
+  top: 15vh;
+  left: 11vw;
+  font-size: 2.5vh;
+  font-family: var(--font-family);
+  font-weight: 350;
+  color: #000;
+  opacity: 0.5;
+}
+
+#profile_edit {
+  position: absolute;
+  top: 23vh;
+  left: 11vw;
+  font-family: var(--font-family);
+  font-weight: 350;
+  font-size: 1.5vh;
+  color: #000;
+}
+
+#profile_edit_line {
+  position: absolute;
+  top: 0.1vh;
+  left: 17.3vh;
+}
+
+#rec_left {
+  position: relative;
+  top: 38vh;
+  left: -3vw;
+  width: 25vw;
+  height: 28vh;
+  background: #e4e4e4;
+  border-radius: 20px;
+  animation: rec_left_anima 0.5s forwards;
+}
+
+#orders_product,
+#basket_product {
+  position: relative;
+}
+
+#orders_product_img,
+#basket_product_img {
+  position: absolute;
+  width: 4vw;
+  height: 7vh;
+  left: 6vw;
+  top: 2vh;
+}
+
+#basket_product_img {
+  width: 6vw;
+  height: 6vh;
+  left: 4.8vw;
+  top: 16vh;
+}
+
+#Order_tracking,
+#basket_tracking {
+  position: absolute;
+  font-family: var(--font-family);
+  font-weight: 350;
+  font-size: 2vh;
+  color: #000;
+  left: 2.5vw;
+  top: 9vh;
+}
+
+#basket_tracking {
+  left: 5.6vw;
+  top: 23vh;
+}
+
+#orders_product_0,
+#basket_product_0 {
+  position: absolute;
+  font-family: var(--font-family);
+  font-weight: 350;
+  font-size: 5vh;
+  color: #000;
+  left: 21.5vw;
+  top: 4.5vh;
+}
+
+#basket_product_0 {
+  top: 18vh;
+}
+
+#rec_left_line {
+  position: absolute;
+  border: 1px solid #000;
+  width: 22.5vw;
+  height: 0vh;
+  top: 13.5vh;
+  left: 1vw;
+}
+
+#rec_right {
+  position: absolute;
+  top: 45vh;
+  right: -5vw;
+  width: 55vw;
+  height: 28vh;
+  background: #e4e4e4;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  animation: rec_right_anima 0.5s forwards;
+}
+
+#favorite_product,
+#bought_product,
+#return_product {
+  position: relative;
+  width: 16vw;
+  height: 20vh;
+  text-align: center;
+}
+
+#favorite_product_img,
+#bought_product_img,
+#return_product_img {
+    position: absolute;
+    top: 2vh;
+    right: 4vw;
+    width: 6vw;
+    height: 8vh;
+    margin-top: 2vh;
+}
+
+#bought_product_img {
+    position: absolute;
+    top: -2vh;
+    right: 5.5vw;
+    width: 5vw;
+    height: 9vh;
+}
+
+#favorite_product_img {
+    position: absolute;
+    top: -2vh;
+    right: 4vw;
+    width: 8vw;
+    height: 8vh;
+}
+
+#return_product_img {
+    position: absolute;
+    top: -2vh;
+    right: 6vw;
+}
+
+#favorite_tracking,
+#bought_tracking,
+#return_tracking {
+    position: absolute;
+    top: 8.5vh;
+    right: 5.3vw;
+    font-family: var(--font-family);
+    font-weight: 350;
+    font-size: 2vh;
+    color: #000;
+    margin-top: 1vh;
+}
+
+#bought_tracking {
+    right: 3.5vw;
+}
+
+#return_tracking {
+    right: 5.5vw;
+}
+
+#favorite_product_0,
+#bought_product_0,
+#return_product_0 {
+    position: absolute;
+    top: 15vh;
+    font-family: var(--font-family);
+    font-weight: 350;
+    font-size: 5vh;
+    color: #000;
+    margin-top: 1vh;
+    right: 7.2vw;
+}
+
+#return_product_0 {
+    font-size: 3vh;
+    right: 3vw;
+    top: 16.5vh;
+}
+
+#rec_right_line,
+#rec_right_line2 {
+    position: absolute;
+    border: 1px solid #000;
+    height: 20vh;
+}
+
+#rec_right_line {
+    left: 33%;
+}
+
+#rec_right_line2 {
+    left: 66%;
+}
+
+#return_product_img {
+    width: 4vw;
+    height: 8vh;
+}
+
+@keyframes ellipce_grey_anima {
+    to {
+        top: 9vh;
+        opacity: 1;
+    }
+}
+
+@keyframes ellipce_tifany_anima {
+    to {
+        top: 61vh;
+        opacity: 1;
+    }
+}
+
+@keyframes ellipce_tifany_big {
+    to {
+        top: 11vh;
+        opacity: 1;
+    }
+}
+
+@keyframes ellipce_grey_big_anima {
+    to {
+        top: 54vh;
+        opacity: 1;
+    }
+}
+
+@keyframes rec_left_anima {
+    to {
+        left: 5vw;
+    }
+}
+
+@keyframes rec_right_anima {
+    to {
+        right: 4vw;
+    }
+}
