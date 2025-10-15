@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "KyFont";
+    src: url(KyivTypeSans-VarGX.ttf);
+}
+
+
 * {
     --font-family: "KyivType Sans", sans-serif;
     --second-family: "Inter", sans-serif;
@@ -13,7 +19,7 @@ html, body {
 }
 
 header {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -367,8 +373,56 @@ footer {
         font-size: 21px;
     }
 
-    /* #line_container{
-        
-    } */
+    #line_container{
+        bottom: 300px;
+        width: 300px;
+        height: 7px;
+        left: 25vw;
+    }
+
+    @keyframes growLine {
+        from { width: 0; }
+        to { width: 520px; }
+    }
+
+    #main_text_right_2{
+        font-size: 11rem;
+    }
+
+    #main_text_right_3{
+        font-size: 11rem;
+        left: 6vw;
+    }
+
+    #magnifying_glass{
+        width: 152px;
+        height: 87px;
+    }
+
+    img{
+        width: 30px;
+        height: auto;
+    }
+
+    #log_in_text{
+        font-size: 1rem;
+    }
+
+    #register_text{
+        font-size: 1rem;
+    }
+
+    #box_text{
+        font-size: 1rem;
+    }
+    .header-right{
+        gap: 10px;
+    }
+    header{
+        padding: 0 2vw;
+    }
+}
+
+@media (max-width: 1020px){
 
 }
