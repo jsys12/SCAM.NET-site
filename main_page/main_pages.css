@@ -294,6 +294,10 @@ footer {
     border: 2px solid #0abab5
 }
 
+a {
+    text-decoration: none;
+}
+
 #main_text_right_2 {
     animation: textDown 0.5s forwards;
     animation-delay: 1s;
