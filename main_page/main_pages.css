@@ -131,6 +131,7 @@ p {
     font-weight: 400;
     font-size: 20px;
     color: #000;
+    margin-top: -1vh;
 }
 
 #main_content {
@@ -296,6 +297,17 @@ footer {
 
 a {
     text-decoration: none;
+}
+
+#love_img,
+#basket_img {
+    width: 4vw;
+}
+
+#box_img {
+    margin-top: 0vh;
+    height: 5.5vh;
+    width: 3vw;
 }
 
 #main_text_right_2 {
