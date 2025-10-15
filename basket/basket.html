@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cart</title>
+</head>
+<body>
+    <header>
+        <span id="title_site">SCAM.NET</span>
+        <span id="title_page">КОРЗИНА</span>
+        <div id="menu">
+            <div id="menu_solid_0"></div>
+            <div id="menu_solid_0"></div>
+            <div id="menu_solid_0"></div>
+        </div>
+    </header>
+    <div id="under_head">
+        <span id="item_counter">В КОРЗИНЕ 0 ТОВАРОВ</span>
+        <div id="left_menu">
+            <a href="" id="menu_blok">
+                <img src="../main_page/content/сердечко.png" rel="ИЗБРАННОЕ" id="menu_img_heart">
+                <p>ИЗБРАННОЕ</p>
+            </a>
+            <a href="" id="menu_blok">
+                <img src="../main_page/content/человек.webp" rel="ИЗБРАННОЕ" id="menu_img_acc">
+                <p>АКК</p>
+            </a>
+            <a href="" id="menu_blok">
+                <img src="../main_page/content/коробка2.png" rel="ИЗБРАННОЕ" id="menu_img_box">
+                <p>ЗАКАЗЫ</p>
+            </a>
+            <a href="" id="menu_blok">
+                <img src="../main_page/content/мусорка.png" rel="ИЗБРАННОЕ" id="menu_img_buket">
+                <p>КОРЗИНА</p>
+            </a>
+        </div>
+    </div>
+    <div id="under_head_line"></div>
 
+    <div id="item_list"></div>
+
+    <div id="vertical_line"></div>
+
+    <div id="item_summ_list">
+        <span id="summ_text">ОБЩАЯ СУММА <br>ТОВАРОВ</span>
+        <div id="horisontal_summ_line"></div>
+        <div id="deliviry_info">
+            ДОСТАВКА  (от 3 дней)<span id="div_cost_info">Бесплатно</span>
+            <br><span id="item_summ_info">Сумма товаров в корзине<span id="clear_summ">$0</span></span>
+        </div>
+        <div id="horisontal_summ_underline"></div>
+        <div id="endsumm_text">К ОПЛАТЕ<span id="endsumm">$0</span></div>
+        <div id="buy_form">
+            <input type="submit" id="buy" value="ОПЛАТИТЬ">
+            <input type="button" id="back_to_catalog" value="ВЕРНУТЬСЯ К ПОКУПКАМ">
+        </div>
+        
+    </div>
+
+    <form id="promocod_field">
+        <span>У ВАС ЕСТЬ ПРОМОКОД?</span>
+
+        <br><input type="text" placeholder="ВВЕДИТЕ КОД" id="promo_enter">
+        <input type="submit" value="ПРИМЕНИТЬ" id="promo_button">
+    </form>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
