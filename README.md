@@ -1,3 +1,3 @@
 SCAM.NET мы честно предупреждаем вас названием.
 
-[Перейти на главную страницу](main_page/main_pages.html)
+<a href="main_page/main_pages.html" target="_blank">Перейти на главную страницу</a>
