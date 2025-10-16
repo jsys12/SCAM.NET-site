@@ -1,3 +1,3 @@
 SCAM.NET мы честно предупреждаем вас названием.
 
-[Перейти на главную страницу](main_page/mian_pages.html)
+[Перейти на главную страницу](main_page/main_pages.html)
