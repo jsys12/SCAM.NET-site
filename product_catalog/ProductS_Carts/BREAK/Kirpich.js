@@ -7,7 +7,7 @@ button_favorite.addEventListener('click', function () {
         image: "content/break.webp"
     };
 
-    let favorite = JSON.parse(localStorage.getItem('favorite'));
+    let favorite = JSON.parse(localStorage.getItem('favorite')) || [];
     favorite.push(Break);
     localStorage.setItem('favorite', JSON.stringify(favorite));
 
