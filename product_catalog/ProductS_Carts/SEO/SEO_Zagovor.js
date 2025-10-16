@@ -7,7 +7,7 @@ button_favorite.addEventListener('click', function() {
         image: "../product_catalog/ProductS_Carts/SEO/content/keys.png"
     };
 
-    let favorite = JSON.parse(localStorage.getItem('favorite'));
+    let favorite = JSON.parse(localStorage.getItem('favorite')) || [];
     favorite.push(SEO);
     localStorage.setItem('favorite', JSON.stringify(favorite));
 
@@ -17,7 +17,8 @@ button_favorite.addEventListener('click', function() {
 });
 
 function updateFavoriteCounter() {
-    const favorite = JSON.parse(localStorage.getItem('favorite'));
+    const favorite = JSON.parse(localStorage.getItem('favorite')) || [];
     const itemCounter = document.getElementById('item_counter');
     itemCounter.textContent = `В ИЗБРАННОМ ${favorite.length} ТОВАРОВ`;
+
 }
