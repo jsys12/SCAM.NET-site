@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="stylesheet" href="registration.css">
-    <script src="registration.js"></script>
 </head>
 <body>
+    <header>
+        <p>SCAM.<span id="NET_1">NET</span></p>
+        <div id="search_1">
+            <input type="text" id="input_search" placeholder="Поиск">
+            <img src="content\лупа.png" id="magnifying_glass" alt="лупа" width="154" height="87">
+        </div>
+        <div class="header-right">
+            <a href="../main_page/main_pages.html" id="link">
+            <div id="home">
+                <img src="content/1660637171226879.jpg.webp" alt="home" width="44" height="44">
+                <p id="home_text">Домой</p>
+            </div>
+            </a>
+        </div>
+    </header>
     <div id="main_rectangle_right">
         <span id="main_rectangle_text_up">SCAM</span>
         <span id="main_rectangle_text_down">NET</span>
@@ -17,17 +31,17 @@
         <div id="rectangle_down"></div>
         <div id="form_registration">
             <p id="main_text_registration">РЕГИСТРАЦИЯ</p>
-            <p id="side_text_registration">У вас есть акк? <a id="href_registration" href="ТУТ БУДЕТ ССЫЛКА НА ВХОД">Войти</a>
+            <p id="side_text_registration">У вас есть акк? <a id="href_registration" href="../sign_in/sign_in.html">Войти</a>
             <form action="" method="" id="main_form_registration">
                 <input type="text" id="main_form_registration_user" placeholder="Введите имя пользователя">
                 <input type="email" id="main_form_registration_email" placeholder="Введите email">
                 <input type="password" id="main_form_registration_password" placeholder="Введите пароль">
                 <input type="password" id="main_form_registration_confirm_password" placeholder="Подтвердите пароль">
                 <button type="submit" id="main_form_registration_button">Продолжить</button>
-                <p id="error">few</p>
+                <p id="error_message"></p>
             </form>
         </div>
     </div>
+    <script src="registration.js"></script>
 </body>
-
 </html>

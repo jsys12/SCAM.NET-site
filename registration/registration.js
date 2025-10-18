@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.querySelector('#main_form_registration_email');
     const password = document.querySelector('#main_form_registration_password');
     const passwordConfirm = document.querySelector('#main_form_registration_confirm_password');
-    const pError = document.querySelector('#error');
+    const errorMessage = document.querySelector('#error_message');
     
     
     form.addEventListener('submit', (event) => {
@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const loginVal = login.value;
         const emailVal = email.value;
         const passwordVal = password.value;
-        // const passwordValConfirm = passwordConfirm.value;
-        // const errors = [];
 
-        if(passwordVal !== passwordConfirm.value){
-            pError.textContent = "Пароли должны совпадать";
+
+        if (passwordVal !== passwordConfirm.value) {
+            errorMessage.classList.add('error');
+            errorMessage.textContent = "Пароли должны совпадать";
         } else {
             console.log(passwordVal)
             console.log(passwordConfirm.value)
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(result => {
                 console.log(result);
                 if(result['message'] == 'User inserted successfully'){
-                    pError.textContent = "Вы успешно зарегестрировались!"
+                    errorMessage.textContent = "Вы успешно зарегестрировались!"
                 }
             });
         }

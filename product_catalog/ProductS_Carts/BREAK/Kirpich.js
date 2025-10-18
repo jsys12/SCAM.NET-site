@@ -1,4 +1,9 @@
 const button_favorite = document.querySelector('#button_favorite');
+const button_buy = document.getElementById('button_buy')
+
+button_buy.addEventListener('click', function() {
+    alert('ваш товар однажды появится в корзине')
+})
 
 button_favorite.addEventListener('click', function () {
     const Break = {
