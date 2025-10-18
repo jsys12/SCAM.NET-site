@@ -48,13 +48,13 @@ p {
     width: 678px;
     height: 57px;
     background: #1c1c1c;
-    padding: 3px;
+    padding: 0px;
     margin: 0 auto;
 }
 
 #input_search {
     position: absolute;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 564px;
     height: 50px;
     font-size: 20px;
