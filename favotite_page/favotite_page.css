@@ -1,12 +1,12 @@
 @font-face {
     font-family: "KyFont";
-    src: url(KyivTypeSans-VarGX.ttf);
+    src: url(../fonts/KyivTypeSans-VarGX.ttf);
 }
 
 * {
-    --font-family: "KyFont", sans-serif;
-    --second-family: "Inter", sans-serif;
-    box-sizing: border-box;
+  --font-family: "KyFont", sans-serif;
+  --second-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -33,23 +33,23 @@ a {
 #title_site {
     position: absolute;
     font-family: var(--font-family);
-    font-variation-settings: 'wght' 700, 'CONT' 500, 'MIDL' 0;
     font-weight: 700;
     font-size: 3vh;
     color: #fff;
     left: 1vw;
     top: 1.5vh;
+    font-variation-settings: 'wght' 700, 'CONT' 500, 'MIDL' 0;
 }
 
 #title_page {
     position: absolute;
     font-family: var(--font-family);
-    font-variation-settings: 'wght' 700, 'CONT' 800, 'MIDL' 0;
     font-size: 4vh;
     color: #fff;
     text-align: center;
     left: 41vw;
     top: 1vh;
+    font-variation-settings: 'wght' 700, 'CONT' 800, 'MIDL' 0;
 }
 
 #menu_solid_0 {
@@ -74,11 +74,11 @@ a {
 #item_counter {
     position: relative;
     font-family: var(--font-family);
-    font-variation-settings: 'wght' 450, 'CONT' 800, 'MIDL' 0;
     font-size: 3.6vh;
     color: #000;
     top: 15.7vh;
     left: 71vw;
+    font-variation-settings: 'wght' 450, 'CONT' 800, 'MIDL' 0;
 }
 
 #left_menu {
