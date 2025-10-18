@@ -31,6 +31,12 @@ a{
     all: unset;
 }
 
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 #title_site{
   position: absolute;
   font-family: var(--font-family);
@@ -297,6 +303,7 @@ a{
     text-align: center;
     color: #fff;
     opacity: 1;
+    border:0.2vw solid #000;
 }
 
 #buy:hover{
@@ -305,6 +312,7 @@ a{
     background-color: #0abab5;
     border:0.2vw solid #0abab5 ;
     color: #000;
+    
 }
 
 #back_to_catalog{
@@ -319,10 +327,12 @@ a{
     text-align: center;
     color: #000;
     opacity: 1;
+    border:0.2vw solid #8f8f9d;
 }
 
 #back_to_catalog:hover{
     opacity: 1;
     transition: 0.3s;
     background-color: #0abab5;
+    border:0.2vw solid #0abab5 ;
 }
