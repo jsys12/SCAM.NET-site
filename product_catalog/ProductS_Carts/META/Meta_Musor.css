@@ -1,11 +1,11 @@
 @font-face {
     font-family: "KyFont";
-    src: url(KyivTypeSans-VarGX.ttf);
+    src: url(../fonts/KyivTypeSans-VarGX.ttf);
 }
 
 
 * {
-  --font-family: "KyivType Sans", sans-serif;
+  --font-family: "KyFont", sans-serif;
   --second-family: "Inter", sans-serif;
   box-sizing: border-box;
 }
@@ -63,6 +63,7 @@ header {
 #Meta_Musor_decription {
     position: absolute;
     font-family: var(--font-family);
+    font-variation-settings: 'wght' 500, 'CONT' 500, 'MIDL' 0;
     color: #fff;
     transform: rotate(-16deg);
 }

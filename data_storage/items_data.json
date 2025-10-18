@@ -1,0 +1,32 @@
+{
+    "items": [
+        {
+        "id": 1,
+        "name": "GIGABYTE GeForce RTX 3060 Ti GAMING OC PRO 8G (rev. 2.0) (GV-N306TGAMING OC-8GD)",
+        "price": 11999,
+        "image": "product_catalog/images/gigabyte-rtx3060ti.png",
+        "category": "GIGA"
+        },
+        {
+        "id": 2,
+        "name": "Crypto Ferma X11 6x RX 580 8GB",
+        "price": 8999,
+        "image": "product_catalog/images/crypto-ferma.png",
+        "category": "CRYPTO"
+        },
+        {
+        "id": 3,
+        "name": "Meta Musor PC (Ryzen 5 3600, GTX 1660 Super, 16GB, 480GB SSD)",
+        "price": 7999,
+        "image": "product_catalog/images/meta-musor.png",
+        "category": "META"
+        },
+        {
+        "id": 4,
+        "name": "Kirpich PC (Intel Core i3-10100F, GTX 1650, 8GB, 240GB SSD)",
+        "price": 4999,
+        "image": "product_catalog/images/kirpich-pc.png",
+        "category": "BREAK"
+        }
+    ]
+}

@@ -1,13 +1,12 @@
 @font-face {
     font-family: "KyFont";
-    src: url(KyivTypeSans-VarGX.ttf);
+    src: url(../fonts/KyivTypeSans-VarGX.ttf);
 }
 
-
 * {
-    --font-family: "KyivType Sans", sans-serif;
-    --second-family: "Inter", sans-serif;
-    font-family: var(--font-family);
+  --font-family: "KyFont", sans-serif;
+  --second-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -33,6 +32,7 @@ header {
 #NET_1,
 p {
     font-family: var(--font-family);
+    font-variation-settings: 'wght' 700, 'CONT' 500, 'MIDL' 0;
     font-weight: 700;
     font-size: 36px;
     color: #fff;
@@ -150,6 +150,7 @@ p {
 
 #main_text {
     font-family: var(--font-family);
+    font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
     font-weight: 350;
     font-size: 64px;
     color: #fff;
@@ -197,6 +198,7 @@ button {
 
 #main_button_text {
     font-family: var(--font-family);
+    font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
     font-weight: 350;
     font-size: 28px;
     color: #000;

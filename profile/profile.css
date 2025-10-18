@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "KyFont";
+    src: url(../fonts/KyivTypeSans-VarGX.ttf);
+}
+
 * {
-  --font-family: "KyivType Sans", sans-serif;
+  --font-family: "KyFont", sans-serif;
   --second-family: "Inter", sans-serif;
   box-sizing: border-box;
 }
@@ -22,6 +27,7 @@ body {
 #header_text_left {
   position: absolute;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 700, 'CONT' 500, 'MIDL' 0;
   font-weight: 700;
   font-size: 3vh;
   color: #fff;
@@ -32,6 +38,7 @@ body {
 #header_text_center {
   position: absolute;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 700, 'CONT' 500, 'MIDL' 0;
   font-weight: 700;
   font-size: 4vh;
   color: #fff;
@@ -43,6 +50,7 @@ body {
 #my_page {
   position: absolute;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
   font-weight: 350;
   color: #000;
   top: 8.5vh;
@@ -129,6 +137,7 @@ body {
   left: 11vw;
   font-size: 4vh;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
   font-weight: 350;
   color: #000;
 }
@@ -139,6 +148,7 @@ body {
   left: 11vw;
   font-size: 2.5vh;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
   font-weight: 350;
   color: #000;
   opacity: 0.5;
@@ -149,6 +159,7 @@ body {
   top: 23vh;
   left: 11vw;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
   font-weight: 350;
   font-size: 1.5vh;
   color: #000;
@@ -196,6 +207,7 @@ body {
 #basket_tracking {
   position: absolute;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
   font-weight: 350;
   font-size: 2vh;
   color: #000;

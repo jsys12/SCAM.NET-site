@@ -1,11 +1,11 @@
 @font-face {
     font-family: "KyFont";
-    src: url(KyivTypeSans-VarGX.ttf);
+    src: url(../fonts/KyivTypeSans-VarGX.ttf);
 }
 
 
 * {
-  --font-family: "KyivType Sans", sans-serif;
+  --font-family: "KyFont", sans-serif;
   --second-family: "Inter", sans-serif;
   box-sizing: border-box;
 }
@@ -38,6 +38,7 @@ header {
 #text_on_line {
   position: fixed;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
   font-weight: 350;
   font-size: 4vw;
   color: #ffffff;
@@ -148,6 +149,7 @@ header {
   height: 40vh;
   background: #3f3f3f;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
   font-weight: 350;
   color: #fff;
   padding: 1vw;
@@ -165,6 +167,7 @@ header {
   height: 34vh;
   background: #3f3f3f;
   font-family: var(--font-family);
+  font-variation-settings: 'wght' 350, 'CONT' 500, 'MIDL' 0;
   font-weight: 350;
   color: #fff;
   padding: 1vw;
