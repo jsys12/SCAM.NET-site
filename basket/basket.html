@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Cart</title>
+    <title>Basket</title>
 </head>
 <body>
     <header>
-        <span id="title_site">SCAM.<span id="net">NET</span></span>
-        <span id="title_page">КОРЗИНА</span>
-        <div id="menu">
-            <div id="menu_solid_0"></div>
-            <div id="menu_solid_0"></div>
-            <div id="menu_solid_0"></div>
+        <span id="title_site">КОРЗИНА</span>
+        <div id="search_1">
+            <input type="text" id="input_search" placeholder="Поиск">
+            <img src="content\лупа.png" id="magnifying_glass" alt="лупа" width="154" height="87">
+        </div>
+        <div class="menu">
+            <a class="menu_item" href="../favotite_page/favotite_page.html">
+                <img src="../main_page/content/сердечко.png" id="menu_img_heart">
+                <p>ИЗБРАННОЕ</p>
+            </a>
+            <a class="menu_item" href="../profile/profile.html">
+                <img src="../main_page/content/человек.webp" id="menu_img_acc">
+                <p>АКК</p>
+            </a>
+            <a class="menu_item" href="../">
+                <img src="../main_page/content/коробка.png" id="menu_img_box">
+                <p>ЗАКАЗЫ</p>
+            </a>
         </div>
     </header>
+    <div id="products"></div>
     <div id="under_head">
         <span id="item_counter">В КОРЗИНЕ 0 ТОВАРОВ</span>
         <div id="left_menu">
@@ -37,8 +50,6 @@
             </a>
         </div>
     </div>
-    <div id="under_head_line"></div>
-
     <div id="item_list">
         <ul>
             <li>
@@ -53,9 +64,7 @@
             </li>
         </ul>
     </div>
-
     <div id="vertical_line"></div>
-
     <div id="item_summ_list">
         <span id="summ_text">ОБЩАЯ СУММА <br>ТОВАРОВ</span>
         <div id="horisontal_summ_line"></div>
@@ -66,19 +75,15 @@
         <div id="horisontal_summ_underline"></div>
         <div id="endsumm_text">К ОПЛАТЕ<span id="endsumm">$0</span></div>
         <div id="buy_form">
-            <input type="submit" id="buy" value="ОПЛАТИТЬ">
+            <button type="button" id="buy">ОПАЛАТИТЬ</button>
             <a href="../product_catalog/product_catalog.html"><button type="button" id="back_to_catalog">ВЕРНУТЬСЯ К ПОКУПКАМ</button></a>
-        </div>
-        
+        </div>     
     </div>
-
     <form id="promocod_field">
         <span>У ВАС ЕСТЬ ПРОМОКОД?</span>
-
         <br><input type="text" placeholder="ВВЕДИТЕ КОД" id="promo_enter">
         <input type="submit" value="ПРИМЕНИТЬ" id="promo_button">
     </form>
-
     <script src="script.js"></script>
 </body>
 </html>
