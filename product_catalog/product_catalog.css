@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    height: 82px;
+    height: 8vh;
     background: linear-gradient(90deg, #333 58.65%, #cfcfcf 100%);
     padding: 0 50px;
     box-sizing: border-box;
@@ -321,7 +321,42 @@ a {
   border-radius: 8px;
 }
 
+#products {
+    position: absolute;
+    border-radius: 20px;
+    border: #000 3px solid;
+    width: 25vw;
+    height: 30vh;
+    background: #585858;
+    top: 10vh;
+    left: 21.5vw;
+    z-index: 1;
+    transition: 0.2s;
+}
 
+.card {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    background: white;
+    color: #000;
+    cursor: pointer;
+    font-size: 1vw;
+    transition: 0.2s;
+}
+
+.card:hover {
+    background: #363636;
+    color: white;
+    transform: scale(1.03);
+    transition: 0.2s;
+    border: 2px solid #0abab5
+}
+
+a {
+    text-decoration: none;
+}
 
 #line_white {
   animation: line_white_anima 0.7s forwards;
