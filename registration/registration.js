@@ -58,23 +58,32 @@ document.addEventListener('DOMContentLoaded', () => {
     
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-        const loginVal = login.value;
-        const emailVal = email.value;
-        const passwordVal = password.value;
+        const data = {}
+        data["username"] = login.value;
+        data["email"] = email.value;
+        data["password"] = password.value;
 
 
-        if (passwordVal !== passwordConfirm.value) {
+        if (data["password"] !== passwordConfirm.value) {
             errorMessage.classList.add('error');
             errorMessage.textContent = "Пароли должны совпадать";
         } else {
-            console.log(passwordVal)
+            console.log(data["password"])
             console.log(passwordConfirm.value)
-            fetch(`http://127.0.0.1:8000/insert_user/?username=${loginVal}&gmail=${emailVal}&password=${passwordVal}`)
+            
+            fetch(`http://127.0.0.1:8000/insert_user/`, {
+                method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(data)
+            })
             .then(res => res.json())
             .then(result => {
                 console.log(result);
                 if(result['message'] == 'User inserted successfully'){
-                    errorMessage.textContent = "Вы успешно зарегестрировались!"
+                    alert("Вы успешно зарегестрировались!")
+                    setTimeout(() => {window.location.href = '../sign_in/sign_in.html'}, 1000)
                 }
             });
         }

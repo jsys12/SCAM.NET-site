@@ -52,14 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector('#main_form_sign_in');
     form.addEventListener('submit', (event) => {
         event.preventDefault()
+        const data = {}
         const formData = new FormData(form);
-        const username = formData.get("username");
-        const password = formData.get("password");
+        data["username"] = formData.get("username");
+        data["password"] = formData.get("password");
         
-        fetch(`http://127.0.0.1:8000/auth/?username=${username}&password=${password}`)
+        fetch(`http://127.0.0.1:8000/auth/`, {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(data)
+        })
         .then(res => res.json())
         .then(result => {
             console.log(result)
+            localStorage.setItem("userData", JSON.stringify(result["result"]))
+            setTimeout(() => {window.location.href = '../profile/profile.html';}, 1000)
+            
         });
     });
 });
