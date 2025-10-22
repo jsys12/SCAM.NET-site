@@ -3,7 +3,6 @@
     src: url(../fonts/KyivTypeSans-VarGX.ttf);
 }
 
-
 * {
   --font-family: "KyFont", sans-serif;
   --second-family: "Inter", sans-serif;
@@ -17,9 +16,7 @@ body {
     overflow: hidden;
 }
 
-header {
-    position: relative;
-}
+header { position: relative; }
 
 #left_black {
     position: absolute;
@@ -69,7 +66,7 @@ header {
 }
 
 #Crypto_Ferma_main_text {
-    font-weight: 500; 
+    font-weight: 500;
     font-size: 12vh;
     top: 40vh;
     right: 13vw;
@@ -112,33 +109,11 @@ header {
     cursor: pointer;
 }
 
-#button_back {
-    top: 111.7vh;
-    right: 35vw;
-    width: 13vw;
-}
+#button_back { top: 111.7vh; right: 35vw; width: 13vw; }
+#button_back:hover { border: solid 3.5px #ff4757; background-color: #383838; color: #ffffff; }
 
-#button_back:hover {
-    border: solid 3.5px #ff4757;
-    background-color: #383838;
-    color: #ffffff;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-#button_buy {
-    top: 97.7vh;
-    right: 8vw;
-    width: 15vw;
-}
-
-#button_buy:hover {
-    border: solid 3.5px #0abab5;
-    background-color: #383838;
-    color: #ffffff;
-    transition: 0.3s;
-    cursor: pointer;
-}
+#button_buy { top: 97.7vh; right: 8vw; width: 15vw; }
+#button_buy:hover { border: solid 3.5px #0abab5; background-color: #383838; color: #ffffff; }
 
 #button_favorite {
     top: 103.4vh;
@@ -155,27 +130,12 @@ header {
     transition: 0.3s;
     cursor: pointer;
 }
+#button_favorite:hover { border: solid 3.5px #ff0191; background-color: #383838; }
 
-#button_favorite:hover {
-    border: solid 3.5px #ff0191;
-    background-color: #383838;
-    transition: 0.3s;
-}
+#heart { width: 6vw; height: 6vh; }
 
-#heart {
-    width: 6vw;
-    height: 6vh;
-}
-
-#rectangle_left {
-    position: relative;
-}
-
-#rectangle_left {
-    position: absolute;
-    top: 10vh;
-    left: 5vw;
-}
+#rectangle_left { position: relative; }
+#rectangle_left { position: absolute; top: 10vh; left: 5vw; }
 
 #flash {
     position: absolute;
@@ -237,45 +197,78 @@ header {
     transform: rotate(180deg);
 }
 
-@keyframes left_black_anima {
-    to {
-        left: 0;
-        opacity: 1;
-    }
+#message_favorite {
+    position: fixed;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    width: max(280px, 30vw);
+    height: 4.5vh;
+    background: #2c2c2c;
+    font-family: var(--font-family);
+    font-weight: 100;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ff00c8;
+    border: 2px #ff00c8 solid;
+    opacity: 0;
+    z-index: 9999;
 }
 
-@keyframes right_white_anima {
-    to {
-        width: 43.2vw;
-        right: 3vw;
-        opacity: 1;
-    }
+.message_favorite_animation {
+    animation: message_favorite 2s forwards;
 }
 
-@keyframes rectangle_right_anima {
-    to {
-        left: 45vw;
-        opacity: 1;
-    }
+@keyframes message_favorite {
+    0%   { top: 2vh; opacity: 0; }
+    20%  { top: 5vh; opacity: 1; }
+    80%  { top: 5vh; opacity: 1; }
+    100% { top: 2vh; opacity: 0; }
 }
 
-@keyframes flash_anima {
-    to {
-        top: 10vh;
-        opacity: 1;
-    }
+@keyframes left_black_anima { 
+    to { 
+        left: 0; 
+        opacity: 1; 
+    } 
 }
 
-@keyframes rec_left_anima {
-    to {
-        top: 63vh;
-        opacity: 1;
-    }
+@keyframes right_white_anima { 
+    to { 
+        width: 43.2vw; 
+        right: 3vw; 
+        opacity: 1; 
+    } 
 }
 
-@keyframes rec_right_anima {
-    to {
-        top: 63vh;
-        opacity: 1;
-    }
+@keyframes rectangle_right_anima { 
+    to { 
+        left: 45vw; 
+        opacity: 1; 
+    } 
+}
+
+@keyframes flash_anima { to 
+    { 
+        top: 10vh; 
+        opacity: 1; 
+    } 
+}
+
+@keyframes rec_left_anima { 
+    to { 
+        top: 63vh; 
+        opacity: 1; 
+    } 
+}
+
+@keyframes rec_right_anima { 
+    to { 
+        top: 63vh; 
+        opacity: 1; 
+    } 
 }

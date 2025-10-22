@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.querySelector('#main_form_registration_email');
     const password = document.querySelector('#main_form_registration_password');
     const passwordConfirm = document.querySelector('#main_form_registration_confirm_password');
-    const errorMessage = document.querySelector('#error_message');
+    const error_message_true = document.querySelector('#error_message_true');
+    const error_message_false = document.querySelector('#error_message_false');
     
     
     form.addEventListener('submit', (event) => {
@@ -65,8 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         if (data["password"] !== passwordConfirm.value) {
-            errorMessage.classList.add('error');
-            errorMessage.textContent = "Пароли должны совпадать";
+            error_message_false.classList.add('error_false');
+            error_message_false.textContent = 'Пароли не совпадают';
+            setTimeout (() => {
+                error_message_false.remove()
+            }, 2000)
+
+            
         } else {
             console.log(data["password"])
             console.log(passwordConfirm.value)
@@ -81,9 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                if(result['message'] == 'User inserted successfully'){
-                    alert("Вы успешно зарегестрировались!")
-                    setTimeout(() => {window.location.href = '../sign_in/sign_in.html'}, 1000)
+                if (result['message'] == 'User inserted successfully'){
+                        error_message_true.classList.add('error_true');
+                        error_message_true.textContent = 'Вы успешно зарегистрировались';
+                        setTimeout(() => {
+                            error_message_true.remove()
+                        }, 2000);
+                    setTimeout(() => {window.location.href = '../sign_in/sign_in.html'}, 5000);
                 }
             });
         }

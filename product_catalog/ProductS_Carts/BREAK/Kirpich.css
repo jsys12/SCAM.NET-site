@@ -237,6 +237,48 @@ header {
     transform: rotate(180deg);
 }
 
+#message_favorite {
+    position: absolute;
+    top: 8vh;
+    left: 35vw;
+    border-radius: 10px;
+    width: 26vw;
+    height: 4vh;
+    background: #2c2c2c;
+    font-family: var(--font-family);
+    font-weight: 100;
+    font-size: 3vh;
+    text-align: center;
+    color: #ff0191;
+    border: 2px #ff0191 solid;
+    opacity: 0;
+    z-index: 9999;
+
+}
+
+.message_favorite_animation {
+    animation: message_favorite 2s forwards;
+}
+
+@keyframes message_favorite {
+    0% {
+        top: 4vh;
+        opacity: 0;
+    }
+    20% {
+        top: 8vh;
+        opacity: 1;
+    }
+    80% {
+        top: 8vh;
+        opacity: 1;
+    }
+    100% {
+        top: 4vh;
+        opacity: 0;
+    }
+}
+
 @keyframes left_black_anima {
     to {
         left: 0;

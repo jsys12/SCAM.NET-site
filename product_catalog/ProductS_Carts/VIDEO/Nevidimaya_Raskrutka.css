@@ -3,7 +3,6 @@
     src: url(../fonts/KyivTypeSans-VarGX.ttf);
 }
 
-
 * {
   --font-family: "KyFont", sans-serif;
   --second-family: "Inter", sans-serif;
@@ -69,7 +68,7 @@ header {
 }
 
 #Nevidimaya_Raskrutka_main_text {
-    font-weight: 500; 
+    font-weight: 500;
     font-size: 12vh;
     top: 40vh;
     right: 14vw;
@@ -236,6 +235,51 @@ header {
     stroke-width: 2px;
     stroke: #fff;
     transform: rotate(180deg);
+}
+
+#message_favorite {
+    position: fixed;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    width: max(280px, 30vw);
+    height: 4.5vh;
+    background: #2c2c2c;
+    font-family: var(--font-family);
+    font-weight: 100;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ff00c8;
+    border: 2px #ff00c8 solid;
+    opacity: 0;
+    z-index: 9999;
+}
+
+.message_favorite_animation {
+    animation: message_favorite 2s forwards;
+}
+
+@keyframes message_favorite {
+    0% {
+        top: 2vh;
+        opacity: 0;
+    }
+    20% {
+        top: 5vh;
+        opacity: 1;
+    }
+    80% {
+        top: 5vh;
+        opacity: 1;
+    }
+    100% {
+        top: 2vh;
+        opacity: 0;
+    }
 }
 
 @keyframes left_black_anima {
