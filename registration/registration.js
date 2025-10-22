@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(data["password"])
             console.log(passwordConfirm.value)
             
-            fetch(`http://127.0.0.1:8000/insert_user/`, {
+            fetch(`https://my-fastapi-app-tfwi.onrender.com/insert_user/`, {
                 method: "POST",
             headers: {
                 "Content-Type" : "application/json"
