@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         data["username"] = formData.get("username");
         data["password"] = formData.get("password");
         
-        fetch(`https://my-fastapi-app-tfwi.onrender.com/auth/`, {
+        fetch(` http://127.0.0.1:8000/auth/`, {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json"
@@ -67,9 +67,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(res => res.json())
         .then(result => {
             console.log(result)
-            localStorage.setItem("userData", JSON.stringify(result["result"]))
-            setTimeout(() => {window.location.href = '../profile/profile.html';}, 1000)
-            
+            if(result["Error"] == "Password / username doesn't match"){
+                // Тут прикол типа пароль не подходит пиши
+            } else {
+                localStorage.setItem("userData", JSON.stringify(result["result"]))
+                setTimeout(() => {window.location.href = '../profile/profile.html';}, 10000)
+            }
         });
     });
 });
