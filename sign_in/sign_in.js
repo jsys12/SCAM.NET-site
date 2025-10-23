@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         data["username"] = formData.get("username");
         data["password"] = formData.get("password");
         
-        fetch ( "http://127.0.0.1:8000/auth/", {
+        fetch ( "https://my-fastapi-app-tfwi.onrender.com/auth/", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json"
