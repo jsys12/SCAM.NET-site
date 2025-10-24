@@ -51,6 +51,7 @@ window.onload = function() {
 
     renderItem()
     updateFavoriteCounter();
+    console.log(favorite.length)
 };
 
 function updateFavoriteCounter() {
@@ -75,6 +76,7 @@ const items = [
     { name: 'Кирпич', price: 1200, url: '../product_catalog/ProductS_Carts/BREAK/Kirpich.html' },
 ];
 
+console.log(items.length)
 
 function rendrItems(list) {
     products.innerHTML = ''
@@ -109,4 +111,3 @@ document.addEventListener('click', function() {
     if (!input_search.contains(event.target) && !products.contains(event.target))
         products.style.display = 'none'
 })
-
